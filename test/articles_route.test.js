@@ -200,7 +200,7 @@ describe('Articles Route:', function () {
      *  }
      *
      */
-    xit('creates a new article', function () {
+    it('creates a new article', function () {
 
       return agent
       .post('/articles')
@@ -218,7 +218,7 @@ describe('Articles Route:', function () {
     });
 
     // This one should fail with a 500 because we don't set the article.content
-    xit('does not create a new article without content', function () {
+    it('does not create a new article without content', function () {
 
       return agent
       .post('/articles')
@@ -230,7 +230,7 @@ describe('Articles Route:', function () {
     });
 
     // Check if the articles were actually saved to the database
-    xit('saves the article to the DB', function () {
+    it('saves the article to the DB', function () {
 
       return agent
       .post('/articles')
@@ -252,7 +252,7 @@ describe('Articles Route:', function () {
     });
 
     // Do not assume async operations (like db writes) will work; always check
-    xit('sends back JSON of the actual created article, not just the POSTed data', function () {
+    it('sends back JSON of the actual created article, not just the POSTed data', function () {
 
       return agent
       .post('/articles')

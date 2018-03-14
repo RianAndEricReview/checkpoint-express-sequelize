@@ -36,4 +36,15 @@ router.get('/articles/:id', (req, res, next) => {
   .catch(next)
 })
 
+router.post('/articles', (req, res, next) => {
+  Article.create(req.body)
+  .then((article) => {
+    res.json({
+      message: 'Created successfully',
+      article: article,
+    })
+  })
+  .catch(next)
+})
+
 module.exports = router;
