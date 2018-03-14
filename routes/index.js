@@ -12,6 +12,12 @@ var Article = require('../models/article');
  *
  *
  */
-
+router.get('/articles', (req, res, next) => {
+  Article.findAll()
+  .then(articles => {
+    res.json(articles)
+  })
+  .catch(next)
+})
 
 module.exports = router;

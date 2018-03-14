@@ -48,7 +48,7 @@ describe('Articles Route:', function () {
      * **Extra Credit**: Consider using app.param to automatically load
      * in the Article whenever a param :id is detected
      */
-    xit('responds with an array via JSON', function () {
+    it('responds with an array via JSON', function () {
 
       return agent
       .get('/articles')
@@ -68,7 +68,7 @@ describe('Articles Route:', function () {
      * using the GET /articles route
      *
      */
-    xit('returns an article if there is one in the DB', function () {
+    it('returns an article if there is one in the DB', function () {
 
       var article = Article.build({
         title: 'Test Article',
@@ -95,7 +95,7 @@ describe('Articles Route:', function () {
      * using the GET /articles route
      *
      */
-    xit('returns another article if there is one in the DB', function () {
+    it('returns another article if there is one in the DB', function () {
 
       var article1 = Article.build({
         title: 'Test Article',

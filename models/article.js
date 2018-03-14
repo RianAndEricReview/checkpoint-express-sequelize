@@ -22,8 +22,7 @@ var Article = db.define('article', {
       return this.content ? this.content.slice(0, 23) + '...' : ''
     },
     tags() {
-      console.log('HIHIHIHIH')
-      return this.getDataVaule('tags').join(', ').trim()
+      return this.getDataValue('tags').join(', ').trim()
     }
   },
   // setterMethods: {
