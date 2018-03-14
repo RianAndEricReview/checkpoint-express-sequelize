@@ -158,7 +158,7 @@ describe('Articles Route:', function () {
      * This is a proper GET /articles/ID request
      * where we search by the ID of the article created above
      */
-    xit('returns the JSON of the article based on the id', function () {
+    it('returns the JSON of the article based on the id', function () {
 
       return agent
       .get('/articles/' + coolArticle.id)
@@ -175,7 +175,7 @@ describe('Articles Route:', function () {
     /**
      * Here we pass in a bad ID to the URL, we should get a 404 error
      */
-    xit('returns a 404 error if the ID is not correct', function () {
+    it('returns a 404 error if the ID is not correct', function () {
 
       return agent
       .get('/articles/76142896')

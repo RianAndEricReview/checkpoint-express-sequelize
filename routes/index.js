@@ -20,4 +20,20 @@ router.get('/articles', (req, res, next) => {
   .catch(next)
 })
 
+router.get('/articles/:id', (req, res, next) => {
+  Article.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(article => {
+    if (!article){
+      res.sendStatus(404)
+    } else {
+      res.json(article)
+    }
+  })
+  .catch(next)
+})
+
 module.exports = router;
