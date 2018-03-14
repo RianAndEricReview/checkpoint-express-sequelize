@@ -47,4 +47,21 @@ router.post('/articles', (req, res, next) => {
   .catch(next)
 })
 
+router.put('/articles/:id', (req, res, next) => {
+  Article.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+    returning: true,
+  })
+  .spread((updateNum, returnValues) => {
+    console.log('EeeeEeeee', returnValues)
+    res.json({
+      message: 'Updated successfully',
+      article: returnValues[0],
+    })
+  })
+  .catch(next)
+})
+
 module.exports = router;

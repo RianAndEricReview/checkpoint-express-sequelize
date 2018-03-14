@@ -300,7 +300,7 @@ describe('Articles Route:', function () {
      *  }
      *
      **/
-    xit('updates an article', function () {
+    it('updates an article', function () {
 
       return agent
       .put('/articles/' + article.id)
@@ -317,7 +317,7 @@ describe('Articles Route:', function () {
 
     });
 
-    xit('saves updates to the DB', function () {
+    it('saves updates to the DB', function () {
 
       return agent
       .put('/articles/' + article.id)
@@ -334,7 +334,7 @@ describe('Articles Route:', function () {
 
     });
 
-    xit('gets 500 for invalid update', function () {
+    it('gets 500 for invalid update', function () {
 
       return agent
       .put('/articles/' + article.id)
